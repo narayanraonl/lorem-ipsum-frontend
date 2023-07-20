@@ -19,14 +19,14 @@ export default function Home() {
     },[])
 
     return (
-    <>
+    <div className="container-fluid">
         <p>Home intro stuff</p>
         {posts.map(post => (
             <div key={post._id}>
-                <h2>post.title</h2>
+                <h2>{post.title}</h2>
                 <p>{post.content.substring(0,100)}...<Link to={`/posts/${post._id}`}>Read More</Link></p>
             </div>
         ))}
-    </>
+    </div>
     )
 }

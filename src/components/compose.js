@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import axios from "axios"
 
 export default function Compose() {
@@ -22,14 +22,14 @@ export default function Compose() {
     }
 
     return (
-        <form>
-            <div className="form-group">
+        <form className="form-group container-fluid">
+            <div>
                 <h4>Title</h4>
                 <input type="text" className="form-control" onChange={e => setTitle(e.target.value)}/>
                 <h4>Post</h4>
                 <textarea rows="5" className="form-control" onChange={e => setContent(e.target.value)}/>
             </div>
-            <button className="btn btn-primary" onClick={handleSubmit}>Publish</button>
+            <Link to='/'><button className="btn btn-primary" onClick={handleSubmit}>Publish</button></Link>
         </form>
     )
 }

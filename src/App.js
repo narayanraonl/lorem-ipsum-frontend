@@ -6,6 +6,7 @@ import About from './components/about'
 import Contact from './components/contact'
 import Compose from './components/compose'
 import Post from './components/post'
+import './components/styles.css'
 
 const router = Router([
     {
