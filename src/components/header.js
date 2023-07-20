@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink,Outlet } from "react-router-dom"
 
 export default function Header() {
     return (
@@ -9,13 +9,14 @@ export default function Header() {
                         <p className="navbar-brand">DAILY JOURNAL</p>
                     </div>
                     <ul className="nav navbar-nav navbar-right">
-                        <li id="home"><NavLink to="/">HOME</NavLink></li>
+                        <div id="home"><NavLink to="/">HOME</NavLink></div>
                         <li id="compose"><NavLink to="/compose">COMPOSE</NavLink></li>
                         <li id="about"><NavLink to="/about">ABOUT</NavLink></li>
                         <li id="contact"><NavLink to="/contact">CONTACT</NavLink></li>
                     </ul>
                 </div>
             </nav>
+            <Outlet />
         </>
     )
 }

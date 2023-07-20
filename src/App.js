@@ -8,12 +8,18 @@ import Compose from './components/compose'
 import Post from './components/post'
 
 const router = Router([
-    {path:'/',element:<Home/>},
-    {path:'/posts',element:<Home/>},
-    {path:'/about',element:<About/>},
-    {path:'/contact',element:<Contact/>},
-    {path:'/compose',element:<Compose/>},
-    {path:'/posts/:postID',element:<Post/>}
+    {
+        path: '/',
+        element: <Header/>,
+        children: [
+            {path:'/',element:<Home/>},
+            {path:'/posts',element:<Home/>},
+            {path:'/about',element:<About/>},
+            {path:'/contact',element:<Contact/>},
+            {path:'/compose',element:<Compose/>},
+            {path:'/posts/:postID',element:<Post/>}
+        ]
+    }
 ])
 
 export default function App() {
