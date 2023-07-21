@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-// import axios from "axios"
+import axios from "axios"
 
 export default function Compose() {
     const [title,setTitle] = useState('')
@@ -14,10 +14,12 @@ export default function Compose() {
         formdata.append('postContent',content);
         formdata.append('file',file);
         try {
-            await fetch('//localhost:3001/compose', {
-                method: "POST",
-                body: formdata
-            }).then(res => res.json());
+            // await fetch('//localhost:3001/compose', {
+            //     method: "POST",
+            //     body: formdata
+            // }).then(res => res.json());
+
+            await axios.post('//localhost:3001/compose',formdata)
     
             setTitle('')
             setContent('')

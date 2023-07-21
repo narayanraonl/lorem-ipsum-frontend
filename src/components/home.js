@@ -24,6 +24,7 @@ export default function Home() {
         {posts.map(post => (
             <div key={post._id}>
                 <h2>{post.title}</h2>
+                {post.image && <img src={`//localhost:3001/Images/${post.image}`} alt="blog img"></img>}
                 <p>{post.content.substring(0,100)}...<Link to={`/posts/${post._id}`}>Read More</Link></p>
             </div>
         ))}

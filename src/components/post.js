@@ -16,7 +16,7 @@ export default function Post() {
             }
         }
         fetchPost()
-    },[params.postID])
+    },[params.postID,post.image])
 
     const handleDelete = async () => {
         try {
@@ -29,6 +29,7 @@ export default function Post() {
 
     return (
         <div className="container-fluid">
+            {post.image && <img src={`//localhost:3001/Images/${post.image}`} alt="blog img"></img>}
             <h1>{post.title}</h1>
             <p>{post.content}</p>
             <Link to='/'>
