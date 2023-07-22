@@ -29,8 +29,8 @@ export default function Post() {
 
     return (
         <div className="container-fluid">
-            {post.image && <img src={`//localhost:3001/Images/${post.image}`} alt="blog img"></img>}
             <h1>{post.title}</h1>
+            {post.image && <img src={`//localhost:3001/Images/${post.image}`} alt="blog img"></img>}
             <p>{post.content}</p>
             <Link to='/'>
             <button className="btn btn-danger" onClick={handleDelete}>
