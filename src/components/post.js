@@ -29,14 +29,14 @@ export default function Post() {
 
     return (
         <div className="container-fluid">
-            <h1>{post.title}</h1>
-            {post.image && <img src={`//localhost:3001/Images/${post.image}`} alt="blog img"></img>}
-            <p>{post.content}</p>
-            <Link to='/'>
-            <button className="btn btn-danger" onClick={handleDelete}>
-                Delete
-            </button>
-            </Link>
+            <div key={post._id} className="card text-bg-dark border-dark mb-3">
+                <div className="card-body">
+                    <h2 className="card-title">{post.title}</h2>
+                    <p className="card-text">{post.content}</p>
+                </div>
+                {post.image && <img src={`//localhost:3001/Images/${post.image}`} alt="blog img" className="card-img-bottom"></img>}
+                <Link className="btn btn-danger" onClick={handleDelete} to='/'>Delete</Link>
+            </div>
         </div>
     )
 }

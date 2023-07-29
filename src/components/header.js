@@ -3,7 +3,7 @@ import { NavLink,Outlet } from "react-router-dom"
 export default function Header() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
                     <div className="navbar-header">
                         <p className="navbar-brand">DAILY JOURNAL</p>

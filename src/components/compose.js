@@ -37,9 +37,9 @@ export default function Compose() {
                 <h4>Post</h4>
                 <textarea rows="5" className="form-control" onChange={e => setContent(e.target.value)}/>
                 <h4>Upload Picture</h4>
-                <input type="file" onChange={e => setFile(e.target.files[0])}></input>
+                <input type="file" className="form-control-2" onChange={e => setFile(e.target.files[0])}></input>
             </div>
-            <Link to='/'><button className="btn btn-primary" onClick={handleSubmit}>Publish</button></Link>
+            <Link to='/'><button className="form-control-2 btn btn-primary" onClick={handleSubmit}>Publish</button></Link>
         </form>
     )
 }
