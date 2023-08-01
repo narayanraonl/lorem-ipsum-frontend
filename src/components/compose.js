@@ -14,12 +14,12 @@ export default function Compose() {
         formdata.append('postContent',content);
         formdata.append('file',file);
         try {
-            // await fetch('//localhost:3001/compose', {
+            // await fetch('${process.env.REACT_APP_BASE_URL}/compose', {
             //     method: "POST",
             //     body: formdata
             // }).then(res => res.json());
 
-            await axios.post('//localhost:3001/compose',formdata)
+            await axios.post(`${process.env.REACT_APP_BASE_URL}/compose`,formdata)
     
             setTitle('')
             setContent('')

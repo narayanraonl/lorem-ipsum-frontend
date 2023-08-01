@@ -2,13 +2,15 @@ import { useState,useEffect } from "react"
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
+console.log(process.env.REACT_APP_BASE_URL)
+
 export default function Home() {
     const [posts,setposts] = useState([])
 
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const recPosts = await axios.get('//localhost:3001/')
+                const recPosts = await axios.get(`${process.env.REACT_APP_BASE_URL}/`)
                 setposts(recPosts.data)
                 console.log(recPosts.data)
             } catch(err) {
@@ -27,7 +29,7 @@ export default function Home() {
                     <h2 className="card-title">{post.title}</h2>
                     <p className="card-text">{post.content.substring(0,100)}...</p>
                 </div>
-                {post.image && <img src={`//localhost:3001/Images/${post.image}`} alt="blog img" className="card-img-bottom"></img>}
+                {post.image && <img src={`${process.env.REACT_APP_BASE_URL}/Images/${post.image}`} alt="blog img" className="card-img-bottom"></img>}
                 <Link className="btn btn-outline-info btn-lg" to={`/posts/${post._id}`}>Read More</Link>
             </div>
         ))}

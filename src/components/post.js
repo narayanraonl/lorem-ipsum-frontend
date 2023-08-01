@@ -9,7 +9,7 @@ export default function Post() {
     useEffect(() => {
         const fetchPost = async () => {
             try {
-                const recPost = await axios.get(`//localhost:3001/posts/${params.postID}`)
+                const recPost = await axios.get(`${process.env.REACT_APP_BASE_URL}/posts/${params.postID}`)
                 setPost(recPost.data)
             } catch(err) {
                 console.error(err)
@@ -20,7 +20,7 @@ export default function Post() {
 
     const handleDelete = async () => {
         try {
-          await axios.delete(`//localhost:3001/posts/${post._id}`)
+          await axios.delete(`${process.env.REACT_APP_BASE_URL}/posts/${post._id}`)
         //   console.log('Post deleted successfully')
         } catch (err) {
           console.error(err)
@@ -34,7 +34,7 @@ export default function Post() {
                     <h2 className="card-title">{post.title}</h2>
                     <p className="card-text">{post.content}</p>
                 </div>
-                {post.image && <img src={`//localhost:3001/Images/${post.image}`} alt="blog img" className="card-img-bottom"></img>}
+                {post.image && <img src={`${process.env.REACT_APP_BASE_URL}/Images/${post.image}`} alt="blog img" className="card-img-bottom"></img>}
                 <Link className="btn btn-outline-secondary btn-lg" onClick={handleDelete} to='/'><i class="fa-solid fa-trash"></i></Link>
             </div>
         </div>
