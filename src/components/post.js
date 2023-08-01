@@ -35,7 +35,7 @@ export default function Post() {
                     <p className="card-text">{post.content}</p>
                 </div>
                 {post.image && <img src={`//localhost:3001/Images/${post.image}`} alt="blog img" className="card-img-bottom"></img>}
-                <Link className="btn btn-danger" onClick={handleDelete} to='/'>Delete</Link>
+                <Link className="btn btn-outline-secondary btn-lg" onClick={handleDelete} to='/'><i class="fa-solid fa-trash"></i></Link>
             </div>
         </div>
     )

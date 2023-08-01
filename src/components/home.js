@@ -28,7 +28,7 @@ export default function Home() {
                     <p className="card-text">{post.content.substring(0,100)}...</p>
                 </div>
                 {post.image && <img src={`//localhost:3001/Images/${post.image}`} alt="blog img" className="card-img-bottom"></img>}
-                <Link className="btn btn-primary" to={`/posts/${post._id}`}>Read More</Link>
+                <Link className="btn btn-outline-info btn-lg" to={`/posts/${post._id}`}>Read More</Link>
             </div>
         ))}
     </div>

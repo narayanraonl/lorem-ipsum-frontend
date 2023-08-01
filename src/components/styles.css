@@ -4,7 +4,8 @@
 }
 
 .container-fluid {
-    padding: 10%;
+    /* padding: 10%; */
+    padding: 5% 15%;
     color: azure;
     background-color: rgb(27, 27, 27);
 }
@@ -51,7 +52,6 @@
 }
 
 .footer {
-    /* background-color: black; */
 	position: fixed;
 	text-align: center;
 	bottom: 0;
