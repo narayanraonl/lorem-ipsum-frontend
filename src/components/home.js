@@ -22,7 +22,7 @@ export default function Home() {
 
     return (
     <div className="container-fluid">
-        <p>Home intro stuff</p>
+        {/* <p>Home intro stuff</p> */}
         {posts.map(post => (
             <div key={post._id} className="card text-bg-dark border-dark mb-3">
                 <div className="card-body">

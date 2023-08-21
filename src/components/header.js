@@ -6,7 +6,7 @@ export default function Header() {
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
                     <div className="navbar-header">
-                        <p className="navbar-brand">DAILY JOURNAL</p>
+                        <p className="navbar-brand">THE OPEN BLOG</p>
                     </div>
                     <ul className="nav navbar-nav navbar-right">
                         <li id="home"><NavLink to="/">HOME</NavLink></li>
